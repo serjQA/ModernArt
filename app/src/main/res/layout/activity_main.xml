@@ -18,7 +18,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/seekBar"
         android:layout_alignParentBottom="true"
-        android:max="83"
+        android:max="255"
         android:progress="0"
         android:background="#ff242324"
         android:layout_alignEnd="@+id/bottom"
@@ -26,10 +26,14 @@
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="313dp"
+        android:layout_height="200dp"
         android:layout_alignParentTop="true"
         android:layout_toEndOf="@+id/leftTop"
         android:id="@+id/topRight"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:background="#ffffffff"
         android:layout_margin="5dp">
 
     </FrameLayout>
@@ -53,14 +57,17 @@
         android:layout_margin="5dp"
         android:layout_below="@+id/leftTop"
         android:layout_alignParentStart="true" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Medium Text"
-        android:id="@+id/textView"
-        android:layout_above="@+id/seekBar"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toEndOf="@+id/centerLeft"
+        android:background="#ff28ff7b"
+        android:layout_below="@+id/topRight"
+        android:id="@+id/centerRight"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_alignBottom="@+id/centerLeft"></FrameLayout>
 
 </RelativeLayout>
