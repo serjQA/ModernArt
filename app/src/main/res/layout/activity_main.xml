@@ -3,14 +3,14 @@
     android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+    android:background="@android:color/black">
 
     <FrameLayout
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_alignParentStart="true"
         android:id="@+id/leftTop"
-        android:background="#ffffcdc3"
         android:layout_margin="5dp"></FrameLayout>
 
     <SeekBar
@@ -18,10 +18,11 @@
         android:layout_height="wrap_content"
         android:id="@+id/seekBar"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
         android:max="83"
-        android:progress="0"/>
+        android:progress="0"
+        android:background="#ff242324"
+        android:layout_alignEnd="@+id/bottom"
+        android:layout_alignStart="@+id/bottom" />
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -29,7 +30,6 @@
         android:layout_alignParentTop="true"
         android:layout_toEndOf="@+id/leftTop"
         android:id="@+id/topRight"
-        android:background="#ff9aff7d"
         android:layout_margin="5dp">
 
     </FrameLayout>
@@ -38,7 +38,6 @@
         android:layout_width="match_parent"
         android:layout_height="300dp"
         android:id="@+id/bottom"
-        android:background="#ff9aff7d"
         android:layout_gravity="left|center_vertical"
         android:layout_margin="5dp"
         android:layout_toStartOf="@+id/topRight"
@@ -50,7 +49,7 @@
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:id="@+id/centerLeft"
-        android:background="#ffffcdc3"
+        android:background="#ffd2d0cf"
         android:layout_margin="5dp"
         android:layout_below="@+id/leftTop"
         android:layout_alignParentStart="true" />
