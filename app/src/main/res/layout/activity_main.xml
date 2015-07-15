@@ -9,8 +9,9 @@
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_alignParentStart="true"
-        android:background="#000000"
-        android:id="@+id/screen"></FrameLayout>
+        android:id="@+id/leftTop"
+        android:background="#ffffcdc3"
+        android:layout_margin="5dp"></FrameLayout>
 
     <SeekBar
         android:layout_width="wrap_content"
@@ -19,7 +20,48 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:max="255"
+        android:max="83"
         android:progress="0"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="313dp"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/leftTop"
+        android:id="@+id/topRight"
+        android:background="#ff9aff7d"
+        android:layout_margin="5dp">
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:id="@+id/bottom"
+        android:background="#ff9aff7d"
+        android:layout_gravity="left|center_vertical"
+        android:layout_margin="5dp"
+        android:layout_toStartOf="@+id/topRight"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/centerLeft"
+        android:layout_above="@+id/seekBar" />
+
+    <FrameLayout
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:id="@+id/centerLeft"
+        android:background="#ffffcdc3"
+        android:layout_margin="5dp"
+        android:layout_below="@+id/leftTop"
+        android:layout_alignParentStart="true" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Medium Text"
+        android:id="@+id/textView"
+        android:layout_above="@+id/seekBar"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>

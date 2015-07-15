@@ -10,16 +10,22 @@ import android.widget.SeekBar;
 
 public class MainActivity extends Activity {
     SeekBar seekBar;
-    FrameLayout leftTop;
+    FrameLayout leftTop, topRight, bottom, centerLeft;
     int seek;
+    boolean tr =true;
+    int count = -1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        leftTop = (FrameLayout)findViewById(R.id.screen);
+        leftTop = (FrameLayout)findViewById(R.id.leftTop);
+        topRight = (FrameLayout)findViewById(R.id.topRight);
+        bottom = (FrameLayout)findViewById(R.id.bottom);
+        centerLeft = (FrameLayout)findViewById(R.id.centerLeft);
         seekBar = (SeekBar)findViewById(R.id.seekBar);
+
 
         updateBackground();
 
@@ -45,8 +51,26 @@ public class MainActivity extends Activity {
     };
 
     private void updateBackground() {
-        seek = seekBar.getProgress();
-        leftTop.setBackgroundColor(0xff000000 + seek*0x10000 + 125 * 0x100 + 60  );
+//        if(count == 0){
+//            leftTop.setTranslationX(leftTop.getTranslationX() - 5);
+//            topRight.setTranslationY(leftTop.getTranslationX() - 5);
+//        }
+//         if(count % 2 == 0 ){
+//            leftTop.setTranslationX(leftTop.getTranslationX() - 10);
+//             topRight.setTranslationY(leftTop.getTranslationX() - 10);
+//        }
+//        else if(count % 2 != 0 ){
+//            leftTop.setTranslationX(leftTop.getTranslationX() + 10);
+//             topRight.setTranslationY(leftTop.getTranslationX() + 10);
+//        }
+        seek = seekBar.getProgress()*3;
+
+        leftTop.setBackgroundColor(0xff000000 + seek * 0x10000 + 5 * 0x100 + 60);
+        topRight.setBackgroundColor(0xff000000 + seek * 0x10000 + 200 * 0x100 + 13);
+        bottom.setBackgroundColor(0xff000000 + seek * 0x10000 + 160* 0x100 + 220);
+        centerLeft.setBackgroundColor(0xff000000 + seek * 0x10000 + 141 * 0x100 + 18);
+
+        count++;
     }
 
     @Override
